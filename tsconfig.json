@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "removeComments": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "outFile": "release/langext.js"
+    }
+}
