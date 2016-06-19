@@ -21,6 +21,13 @@ interface StringConstructor {
     random(length: number, seed?: string) : string;
 }
 
+interface Buffer {
+
+    writeBuffer(bf: Buffer, pos: number, length?: number): number;
+
+    read(pos: number, length: number): Buffer;
+}
+
 interface DateConstructor {
     /** Get the unix timestamp of current time. */
     timeNow(): number;
