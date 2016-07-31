@@ -1,6 +1,8 @@
 /// <reference path="../typings/langext.d.ts"/>
 /// <reference path="../typings/tsd.d.ts"/>
+
 if (typeof(Buffer) != 'undefined') {
+
     Buffer.prototype.writeBuffer = function(bf: Buffer, pos: number, length?: number): number {
         return bf.copy(this, pos, 0, length);
     };
