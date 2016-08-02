@@ -2,7 +2,7 @@
   "name": "langext",
   "version": "1.0.0",
   "description": "A language extension package for javescript.",
-  "main": "langext.js",
+  "main": "./dist/langext.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +14,5 @@
     "langext"
   ],
   "author": "Angus.Fenying",
-  "license": "LGPL-3.0",
-  "typings": "typings/langext.d.ts"
+  "license": "LGPL-3.0"
 }

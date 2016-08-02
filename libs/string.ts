@@ -1,4 +1,4 @@
-/// <reference path="../typings/langext.d.ts"/>
+/// <reference path="./langext.d.ts"/>
 
 /**
  * This module introduces new utility functions for JS/TS.

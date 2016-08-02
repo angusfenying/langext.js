@@ -1,4 +1,4 @@
-/// <reference path="../typings/langext.d.ts"/>
+/// <reference path="./langext.d.ts"/>
 
 interface DateConstructor {
     timeNow(): number;

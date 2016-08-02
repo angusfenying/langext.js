@@ -1,4 +1,4 @@
-import "./sources/date.ts";
-import "./sources/string.ts";
-import "./sources/number.ts";
-import "./sources/buffer.ts";
+import "./libs/date";
+import "./libs/string";
+import "./libs/number";
+import "./libs/regexp";

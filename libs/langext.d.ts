@@ -106,3 +106,23 @@ interface Number {
      */
     formatSize (ac?: number) : NumberFormatSizeResult;
 }
+
+interface MatchSubGroup {
+    "index": number;
+    "value": string;
+}
+
+interface MatchResultItem {
+    "index": number;
+    "value": string;
+    "groups": MatchSubGroup[];
+}
+
+interface RegExp {
+
+    /**
+     * Return all matchable results, with the position of
+     * all matched sub item.
+     */
+    matches(str: string): MatchResultItem[];
+}
