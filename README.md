@@ -1,3 +1,3 @@
 # langext.js
 
-This project for is my personal javascript utilities.
+This project is for the utilities extensions for Javascript.
