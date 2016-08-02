@@ -14,5 +14,6 @@
     "langext"
   ],
   "author": "Angus.Fenying",
-  "license": "LGPL-3.0"
+  "license": "LGPL-3.0",
+  "typings": "typings/langext.d.ts"
 }

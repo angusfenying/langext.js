@@ -32,6 +32,21 @@ interface String {
      * Format data by this format into a string.
      */
     format(target: { [key: string]: string; }): string;
+
+    /**
+     * Replace all EOL into LF.
+     */
+    toEndLineOfLF(): string;
+
+    /**
+     * Replace all EOL into CR.
+     */
+    toEndLineOfCR(): string;
+
+    /**
+     * Replace all EOL into CRLF.
+     */
+    toEndLineOfCRLF(): string;
 }
 
 interface StringConstructor {
