@@ -31,7 +31,7 @@ interface String {
     /**
      * Format data by this format into a string.
      */
-    format(target: { [key: string]: string; }): string;
+    format(target: { [key: string]: string | number; }): string;
 
     /**
      * Replace all EOL into LF.
@@ -54,7 +54,7 @@ interface StringConstructor {
     /**
      * Format data by specific format into a string.
      */
-    format(fmt: string, target: { [key: string]: string; }): string;
+    format(fmt: string, target: { [key: string]: string | number; }): string;
 
     /**
      * Create a random by specific length and seed.
@@ -90,6 +90,16 @@ interface Date {
      * of object.
      */
     getSimpleDate(): string;
+
+    /**
+     * Judge if a date is of leap year.
+     */
+    isLeapYear(): boolean;
+
+    /**
+     * Tells how many days in a month (0 ~ 11), in year of this date.
+     */
+    getDaysInMonth(month: number): number;
 }
 
 interface NumberFormatSizeResult {

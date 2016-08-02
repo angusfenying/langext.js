@@ -13,9 +13,9 @@ String.random = function (length: number, seed: string = "abcdefghijklmnopqrstuv
     return result;
 };
 
-String.format = function(fmt: string, target: { [key: string]: string; }): string {
+String.format = function(fmt: string, target: { [key: string]: string | number; }): string {
 
-    return fmt.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): string {
+    return fmt.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): any {
 
         return target[matchVal.substr(2, matchVal.length - 3)];
 
@@ -56,9 +56,9 @@ String.prototype.isIPv4 = function(): boolean {
     return this.match(/^[0-9]{1,3}(\.[0-9]{1,3}){3}$/) ? true : false;
 };
 
-String.prototype.format = function(target: { [key: string]: string; }): string {
+String.prototype.format = function(target: { [key: string]: string | number; }): string {
 
-    return this.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): string {
+    return this.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): string | number {
 
         return target[matchVal.substr(2, matchVal.length - 3)];
 
