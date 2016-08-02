@@ -4,15 +4,22 @@
   "description": "A language extension package for javescript.",
   "main": "./dist/langext.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./dist/sample.js",
+    "build": "tsc -p ./tsconfig.json"
   },
+  "homepage": "https://github.com/angusfenying/langext.js#readme",
   "repository": {
     "type": "git",
     "url": "git@git.oschina.net:fenying/langext.js.git"
   },
+  "bugs": {
+    "url": "https://github.com/angusfenying/langext.js/issues"
+  },
   "keywords": [
-    "langext"
+    "javascript",
+    "language",
+    "extension"
   ],
-  "author": "Angus.Fenying",
+  "author": "Fenying",
   "license": "LGPL-3.0"
 }

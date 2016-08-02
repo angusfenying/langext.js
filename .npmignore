@@ -1,0 +1,7 @@
+/libs/
+/*.ts
+/.git/
+/.gitignore
+/tslint.json
+/tsconfig.json
+/.travis.yml
