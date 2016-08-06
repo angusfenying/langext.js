@@ -6,6 +6,10 @@
 
     - Applied with once-initialization.
 
+-   v1.1.3
+
+    - Fixed bugs of `String.prototype.format`.
+
 ## 2016-08-05
 
 -   v1.1.1

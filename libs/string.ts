@@ -103,7 +103,7 @@ if (!String.prototype.isIPv4) {
     };
 }
 
-if (String.prototype.format) {
+if (!String.prototype.format) {
 
     String.prototype.format = function(target: { [key: string]: string | number; }): string {
 
