@@ -1,53 +1,56 @@
 /// <reference path="./langext.d.ts"/>
 
-RegExp.prototype.matches = function(str: string): MatchResultItem[] {
+if (!RegExp.prototype.matches) {
 
-    let mc: MatchResultItem[] = [];
-    let rea: RegExpExecArray;
+    RegExp.prototype.matches = function(str: string): MatchResultItem[] {
 
-    while (rea = this.exec(str)) {
+        let mc: MatchResultItem[] = [];
+        let rea: RegExpExecArray;
 
-        let gc: MatchSubGroup[] = [];
+        while (rea = this.exec(str)) {
 
-        let i: number = 0;
-        let ot: string = rea[0];
-        let baseIndex: number = rea.index;
+            let gc: MatchSubGroup[] = [];
 
-        for (let val of rea) {
+            let i: number = 0;
+            let ot: string = rea[0];
+            let baseIndex: number = rea.index;
 
-            let g: MatchSubGroup;
+            for (let val of rea) {
 
-            if (i === 0) {
+                let g: MatchSubGroup;
 
-                g = {
-                    "index": rea.index,
-                    "value": val
-                };
+                if (i === 0) {
 
-            } else {
+                    g = {
+                        "index": rea.index,
+                        "value": val
+                    };
 
-                let index: number = ot.indexOf(val);
+                } else {
 
-                g = {
-                    "index": index + baseIndex,
-                    "value": val
-                };
-                ot = ot.substr(index + val.length);
-                baseIndex += index + val.length;
+                    let index: number = ot.indexOf(val);
 
+                    g = {
+                        "index": index + baseIndex,
+                        "value": val
+                    };
+                    ot = ot.substr(index + val.length);
+                    baseIndex += index + val.length;
+
+                }
+
+                gc.push(g);
+
+                ++i;
             }
 
-            gc.push(g);
-
-            ++i;
+            mc.push({
+                "index": rea.index,
+                "value": rea[0],
+                "groups": gc
+            });
         }
 
-        mc.push({
-            "index": rea.index,
-            "value": rea[0],
-            "groups": gc
-        });
-    }
-
-    return mc;
-};
+        return mc;
+    };
+}

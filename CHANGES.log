@@ -1,5 +1,17 @@
 # Changes Logs of langext.js
 
+## 2016-08-06
+
+-   v1.1.2
+
+    - Applied with once-initialization.
+
+## 2016-08-05
+
+-   v1.1.1
+
+    - Fixed the URL of project on Github.
+
 ## 2016-08-02
 
 -   v1.0.0
