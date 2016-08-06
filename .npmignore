@@ -5,3 +5,6 @@
 /tslint.json
 /tsconfig.json
 /.travis.yml
+/.vscode/
+/node_modules/
+/typings/
