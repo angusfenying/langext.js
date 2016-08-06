@@ -1,25 +1,28 @@
 {
   "name": "langext",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A language extension package for javescript and typescript.",
   "main": "./dist/langext.js",
   "scripts": {
     "test": "node ./dist/sample.js",
     "build": "tsc -p ./tsconfig.json"
   },
-  "homepage": "https://github.com/angusfenying/langext.js#readme",
+  "homepage": "https://github.com/fenying/langext.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angusfenying/langext.js.git"
+    "url": "git+https://github.com/fenying/langext.js.git"
   },
   "bugs": {
-    "url": "https://github.com/angusfenying/langext.js/issues"
+    "url": "https://github.com/fenying/langext.js/issues"
   },
   "keywords": [
     "javascript",
     "typescript",
     "language",
     "extension"
+  ],
+  "maintainers": [
+    "Fenying <i.am.x.fenying@gmail.com>"
   ],
   "author": "Fenying",
   "license": "LGPL-3.0"
