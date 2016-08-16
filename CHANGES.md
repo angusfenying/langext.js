@@ -1,20 +1,27 @@
 # Changes Logs of langext.js
 
+## 2016-08-16
+
+-   v1.2.1-preview-1
+
+    - Added new method `Date.prototype.nextDay`. (Angus.Fenying)
+    - Added new method `Date.prototype.nextMonth`. (Angus.Fenying)
+
 ## 2016-08-06
 
 -   v1.1.2
 
-    - Applied with once-initialization.
+    - Applied with once-initialization. (Angus.Fenying)
 
 -   v1.1.3
 
-    - Fixed bugs of `String.prototype.format`.
+    - Fixed bugs of `String.prototype.format`. (Angus.Fenying)
 
 ## 2016-08-05
 
 -   v1.1.1
 
-    - Fixed the URL of project on Github.
+    - Fixed the URL of project on Github. (Angus.Fenying)
 
 ## 2016-08-02
 

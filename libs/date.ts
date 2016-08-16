@@ -17,6 +17,46 @@ if (!Date.prototype.getSimpleDate) {
     };
 }
 
+if (!Date.prototype.nextMonth) {
+
+    Object.defineProperty(Date.prototype, "nextMonth", {
+
+        "value": function(): Date {
+
+            let result: Date = new Date(this.getTime());
+
+            result.setMonth(result.getMonth() + 1);
+
+            return result;
+
+        },
+
+        "enumerable": false,
+
+        "writable": false,
+
+        "configurable": false
+    });
+}
+
+if (!Date.prototype.nextDay) {
+
+    Object.defineProperty(Date.prototype, "nextDay", {
+
+        "value": function(): Date {
+
+            return new Date(this.getTime() + 86400000);
+
+        },
+
+        "enumerable": false,
+
+        "writable": false,
+
+        "configurable": false
+    });
+}
+
 if (!Date.prototype.isLeapYear) {
 
     Date.prototype.isLeapYear = function(): boolean {

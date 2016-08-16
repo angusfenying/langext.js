@@ -100,6 +100,16 @@ interface Date {
      * Tells how many days in a month (0 ~ 11), in year of this date.
      */
     getDaysInMonth(month: number): number;
+
+    /**
+     * Get the Date object of the next month from this Date on.
+     */
+    nextMonth(): Date;
+
+    /**
+     * Get the Date object of the next day from this Date on.
+     */
+    nextDay(): Date;
 }
 
 interface NumberFormatSizeResult {
