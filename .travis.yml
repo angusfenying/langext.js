@@ -6,4 +6,8 @@ install:
     - npm install typescript -g
 script:
     - npm run build
+    - npm run build-amd
+    - npm run build-system
+    - npm run build-umd
+    - npm run build-es6
     - npm test

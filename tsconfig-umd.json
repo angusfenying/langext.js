@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "module": "umd",
+        "target": "ES5",
+        "outDir": "./dist-umd"
+    },
+    "exclude": [
+        "sample.ts"
+    ]
+}

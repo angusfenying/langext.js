@@ -28,3 +28,13 @@ if ((new Date).isLeapYear()) {
 
     console.log("This year isn't leap year.");
 }
+
+console.log("A random string: ", String.random(16));
+
+console.log("A random hex string: ", String.random(16, "0123456789abcdef"));
+
+console.log("Today is", (new Date).getSimpleDate());
+
+console.log("Next day is", (new Date).getNextDay().getSimpleDate());
+
+console.log("Next month is", (new Date).getNextMonth().getSimpleDate());

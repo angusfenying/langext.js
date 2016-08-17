@@ -1,11 +1,15 @@
 {
   "name": "langext",
-  "version": "1.2.1-pre-1",
+  "version": "1.2.1-pre-2",
   "description": "A language extension package for javescript and typescript.",
   "main": "./dist/langext.js",
   "scripts": {
     "test": "node ./dist/sample.js",
-    "build": "tsc -p ./tsconfig.json"
+    "build": "tsc -p ./tsconfig.json",
+    "build-amd": "tsc -p ./tsconfig-amd.json",
+    "build-umd": "tsc -p ./tsconfig-umd.json",
+    "build-es6": "tsc -p ./tsconfig-es6.json",
+    "build-system": "tsc -p ./tsconfig-system.json"
   },
   "homepage": "https://github.com/fenying/langext.js#readme",
   "repository": {

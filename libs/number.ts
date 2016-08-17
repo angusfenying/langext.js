@@ -1,32 +1,27 @@
 /// <reference path="./langext.d.ts"/>
 
-/**
- * This module introduces new utility functions for JS/TS.
- */
+import { extendMethod } from "./extDefine";
 
-if (!Number.prototype.formatSize) {
+extendMethod(Number.prototype, "formatSize", function(ac: number = 1): NumberFormatSizeResult {
 
-    Number.prototype.formatSize = function(ac: number = 1): NumberFormatSizeResult {
+    let k = this * 1.0;
+    let i = 0;
+    let units = ["B", "KB", "MB", "GB", "TB", "PB"];
 
-        let k = this * 1.0;
-        let i = 0;
-        let units = ["B", "KB", "MB", "GB", "TB", "PB"];
+    while (k >= 1048576) {
 
-        while (k >= 1048576) {
+        i++;
+        k /= 1024.0;
+    }
 
-            i++;
-            k /= 1024.0;
-        }
+    if (k >= 1024) {
 
-        if (k >= 1024) {
+        i++;
+        k /= 1024.0;
+    }
 
-            i++;
-            k /= 1024.0;
-        }
-
-        return {
-            "num": k > 0 ? k.toFixed(ac) : "0",
-            "unit": units[i]
-        };
+    return {
+        "num": k > 0 ? k.toFixed(ac) : "0",
+        "unit": units[i]
     };
-}
+});

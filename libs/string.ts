@@ -1,140 +1,109 @@
 /// <reference path="./langext.d.ts"/>
 
-/**
- * This module introduces new utility functions for JS/TS.
- */
+import { extendMethod, extendConstant } from "./extDefine";
 
 const DEFAULT_RANDOM_SEED: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-if (!String.random) {
+extendConstant(String, "DEFAULT_RANDOM_SEED", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
 
-    String.random = function (length: number, seed: string = DEFAULT_RANDOM_SEED): string {
+extendMethod(String, "random", function (length: number, seed: string = String["DEFAULT_RANDOM_SEED"]): string {
 
-        let l: number = seed.length;
-        let result: string = "";
+    let l: number = seed.length;
+    let result: string = "";
 
-        if (length <= 0) {
-
-            return result;
-        }
-
-        while (length-- > 0) {
-
-            result += seed[Math.floor(Math.random() * l)];
-        }
+    if (length <= 0) {
 
         return result;
-    };
-}
+    }
 
-if (!String.format) {
+    while (length-- > 0) {
 
-    String.format = function(fmt: string, target: { [key: string]: string | number; }): string {
+        result += seed[Math.floor(Math.random() * l)];
+    }
 
-        return fmt.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): any {
+    return result;
+});
 
-            return target[matchVal.substr(2, matchVal.length - 3)];
+extendMethod(String, "format", function(fmt: string, target: { [key: string]: string | number; }): string {
 
-        });
-    };
-}
+    return fmt.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): any {
 
-if (!String.prototype.leftPad) {
+        return target[matchVal.substr(2, matchVal.length - 3)];
 
-    String.prototype.leftPad = function (el: string, length: number): string {
+    });
+});
 
-        let rtn: string = this, t: string = this;
+extendMethod(String.prototype, "leftPad", function (el: string, length: number): string {
 
-        while ((t = el + t).length <= length) {
+    let rtn: string = this, t: string = this;
 
-            rtn = t;
-        }
+    while ((t = el + t).length <= length) {
 
-        if (rtn.length < length) {
+        rtn = t;
+    }
 
-            rtn = el.substr(0, length - rtn.length) + rtn;
-        }
+    if (rtn.length < length) {
 
-        return rtn;
-    };
-}
+        rtn = el.substr(0, length - rtn.length) + rtn;
+    }
 
-if (!String.prototype.rightPad) {
+    return rtn;
+});
 
-    String.prototype.rightPad = function (el: string, length: number): string {
+extendMethod(String.prototype, "rightPad", function (el: string, length: number): string {
 
-        let rtn: string = this, t: string = this;
+    let rtn: string = this, t: string = this;
 
-        while ((t += el).length <= length) {
+    while ((t += el).length <= length) {
 
-            rtn = t;
-        }
+        rtn = t;
+    }
 
-        if (rtn.length < length) {
+    if (rtn.length < length) {
 
-            rtn += el.substr(0, length - rtn.length);
-        }
+        rtn += el.substr(0, length - rtn.length);
+    }
 
-        return rtn;
-    };
-}
+    return rtn;
+});
 
-if (!String.prototype.isEMail) {
+extendMethod(String.prototype, "isEMail", function(): boolean {
 
-    String.prototype.isEMail = function(): boolean {
+    return this.match(/^[-_\w\.]+\@[-_\w]+(\.[-_\w]+)*$/i) ? true : false;
+});
 
-        return this.match(/^[-_\w\.]+\@[-_\w]+(\.[-_\w]+)*$/i) ? true : false;
-    };
-}
+extendMethod(String.prototype, "isHex", function(): boolean {
 
-if (!String.prototype.isHex) {
+    return this.match(/^[0-9a-f]+$/i) ? true : false;
+});
 
-    String.prototype.isHex = function(): boolean {
+extendMethod(String.prototype, "isIPv4", function(): boolean {
 
-        return this.match(/^[0-9a-f]+$/i) ? true : false;
-    };
-}
+    return this.match(/^[0-9]{1,3}(\.[0-9]{1,3}){3}$/) ? true : false;
+});
 
-if (!String.prototype.isIPv4) {
+extendMethod(String.prototype, "format", function(target: { [key: string]: string | number; }): string {
 
-    String.prototype.isIPv4 = function(): boolean {
+    return this.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): string | number {
 
-        return this.match(/^[0-9]{1,3}(\.[0-9]{1,3}){3}$/) ? true : false;
-    };
-}
+        let k: string = matchVal.substr(2, matchVal.length - 3);
 
-if (!String.prototype.format) {
+        return target[k] ? target[k] : matchVal;
 
-    String.prototype.format = function(target: { [key: string]: string | number; }): string {
+    });
+});
 
-        return this.replace(/\$\{\w+\}/g, function(matchVal: string, index: number): string | number {
+extendMethod(String.prototype, "toEndLineOfCR", function(): string {
 
-            return target[matchVal.substr(2, matchVal.length - 3)];
+    return this.replace(/\r\n|\n/g, "\r");
+});
 
-        });
-    };
-}
+extendMethod(String.prototype, "toEndLineOfLF", function(): string {
 
-if (!String.prototype.toEndLineOfCR) {
+    return this.replace(/\r\n|\n/g, "\n");
+});
 
-    String.prototype.toEndLineOfCR = function(): string {
+extendMethod(String.prototype, "toEndLineOfCRLF", function(): string {
 
-        return this.replace(/\r\n|\n/g, "\r");
-    };
-}
-
-if (!String.prototype.toEndLineOfLF) {
-
-    String.prototype.toEndLineOfLF = function(): string {
-
-        return this.replace(/\r\n|\n/g, "\n");
-    };
-}
-
-if (!String.prototype.toEndLineOfCRLF) {
-
-    String.prototype.toEndLineOfCRLF = function(): string {
-
-        return this.replace(/\r\n|\r|\n/g, "\r\n");
-    };
-}
+    return this.replace(/\r\n|\r|\n/g, "\r\n");
+});

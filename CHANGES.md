@@ -1,5 +1,15 @@
 # Changes Logs of langext.js
 
+## 2016-08-17
+
+-   v1.2.1-preview-2
+
+    - Use `Object.defineProperty` instead of assignment expression. (Angus.Fenying)
+    - Rename `Date.prototype.nextDay` into `Date.prototype.getNextDay`. (Angus.Fenying)
+    - Rename `Date.prototype.nextMonth` into `Date.prototype.getNextMonth`. (Angus.Fenying)
+    - Added new method `Date.prototype.getToday`. (Angus.Fenying)
+    - Added module styles of "es6", "amd", "systemjs", "umd". (Angus.Fenying)
+
 ## 2016-08-16
 
 -   v1.2.1-preview-1

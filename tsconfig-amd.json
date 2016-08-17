@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "module": "amd",
+        "target": "ES5",
+        "outFile": "./dist/langext-amd.js"
+    },
+    "exclude": [
+        "sample.ts"
+    ]
+}

@@ -103,13 +103,20 @@ interface Date {
 
     /**
      * Get the Date object of the next month from this Date on.
+     * @param remains      Remain the rest part, default to be true.
      */
-    nextMonth(): Date;
+    getNextMonth(remains?: boolean): Date;
 
     /**
      * Get the Date object of the next day from this Date on.
+     * @param remains      Remain the rest part, default to be true.
      */
-    nextDay(): Date;
+    getNextDay(remains?: boolean): Date;
+
+    /**
+     * Get the Date object of today of this Date.
+     */
+    getToday(): Date;
 }
 
 interface NumberFormatSizeResult {

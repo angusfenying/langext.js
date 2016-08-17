@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "module": "system",
+        "target": "ES5",
+        "outFile": "./dist/langext-system.js"
+    },
+    "exclude": [
+        "sample.ts"
+    ]
+}
