@@ -2,6 +2,12 @@
 
 import { extendMethod } from "./extDefine";
 
+extendMethod(RegExp, "escape", function(str: string): string {
+
+    return str.replace(/([\~\!\$\^\*\(\)\{\}\[\]\\\|\:\/\?\<\>\.])/g, "\\$1");
+
+});
+
 extendMethod(RegExp.prototype, "matches", function(str: string): MatchResultItem[] {
 
     let mc: MatchResultItem[] = [];

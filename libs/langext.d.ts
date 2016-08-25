@@ -153,3 +153,12 @@ interface RegExp {
      */
     matches(str: string): MatchResultItem[];
 }
+
+interface RegExpConstructor {
+
+    /**
+     * Helps transfer the special charactors of RegExp into escaped
+     * charactors. 
+     */
+    escape(str: string): string;
+}
