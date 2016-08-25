@@ -38,3 +38,8 @@ console.log("Today is", (new Date).getSimpleDate());
 console.log("Next day is", (new Date).getNextDay().getSimpleDate());
 
 console.log("Next month is", (new Date).getNextMonth().getSimpleDate());
+
+if (new RegExp(RegExp.escape("~!")).exec("~!")) {
+
+    console.log("Regular Expression escaped successfully.");
+}

@@ -1,5 +1,11 @@
 # Changes Logs of langext.js
 
+## 2016-08-25
+
+-   v1.2.1-preview-3
+
+    - Added a static method `RegExp.escape`. (Angus.Fenying)
+
 ## 2016-08-17
 
 -   v1.2.1-preview-2
