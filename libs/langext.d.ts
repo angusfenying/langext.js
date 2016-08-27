@@ -49,6 +49,14 @@ interface String {
     toEndLineOfCRLF(): string;
 }
 
+interface Array<T> {
+
+    /**
+     * Remove specific VALUE from an array by specific times.
+     */
+    remove(v: T, limit?: number): number;
+}
+
 interface StringConstructor {
 
     /**

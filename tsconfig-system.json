@@ -3,7 +3,8 @@
         "removeComments": true,
         "module": "system",
         "target": "ES5",
-        "outFile": "./dist/langext-system.js"
+        "outFile": "./dist/langext-system.js",
+        "newLine": "LF"
     },
     "exclude": [
         "sample.ts"

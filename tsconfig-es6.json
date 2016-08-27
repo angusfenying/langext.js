@@ -3,7 +3,8 @@
         "removeComments": true,
         "module": "es2015",
         "target": "ES6",
-        "outDir": "./dist-es6"
+        "outDir": "./dist-es6",
+        "newLine": "LF"
     },
     "exclude": [
         "sample.ts"

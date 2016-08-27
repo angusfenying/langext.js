@@ -3,6 +3,7 @@
         "removeComments": true,
         "module": "commonjs",
         "target": "ES5",
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "newLine": "LF"
     }
 }

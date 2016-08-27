@@ -1,5 +1,11 @@
 # Changes Logs of langext.js
 
+## 2016-08-28
+
+-   v1.2.1-preview-4
+
+    - Added a method `Array.prototype.remove`. (Angus.Fenying)
+
 ## 2016-08-25
 
 -   v1.2.1-preview-3

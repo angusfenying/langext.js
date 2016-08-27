@@ -3,7 +3,8 @@
         "removeComments": true,
         "module": "umd",
         "target": "ES5",
-        "outDir": "./dist-umd"
+        "outDir": "./dist-umd",
+        "newLine": "LF"
     },
     "exclude": [
         "sample.ts"

@@ -4,6 +4,11 @@
 /.gitignore
 /tslint.json
 /tsconfig.json
+/tsconfig-system.json
+/tsconfig-amd.json
+/tsconfig-umd.json
+/tsconfig-es6.json
+/rebuild.sh
 /.travis.yml
 /.vscode/
 /node_modules/

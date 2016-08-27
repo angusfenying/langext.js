@@ -3,7 +3,8 @@
         "removeComments": true,
         "module": "amd",
         "target": "ES5",
-        "outFile": "./dist/langext-amd.js"
+        "outFile": "./dist/langext-amd.js",
+        "newLine": "LF"
     },
     "exclude": [
         "sample.ts"
