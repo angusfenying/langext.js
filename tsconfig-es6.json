@@ -4,6 +4,7 @@
         "module": "es2015",
         "target": "ES6",
         "outDir": "./dist-es6",
+        "sourceMap": true,
         "newLine": "LF"
     },
     "exclude": [

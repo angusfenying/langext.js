@@ -4,6 +4,7 @@
         "module": "umd",
         "target": "ES5",
         "outDir": "./dist-umd",
+        "sourceMap": true,
         "newLine": "LF"
     },
     "exclude": [
