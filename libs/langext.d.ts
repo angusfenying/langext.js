@@ -170,3 +170,13 @@ interface RegExpConstructor {
      */
     escape(str: string): string;
 }
+
+interface Console {
+
+    isDebug: boolean;
+
+    /**
+     * Write data for debug.
+     */
+    debug(message?: any, ...optionalParams: any[]): void;
+}

@@ -49,3 +49,13 @@ let x: number[] = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 x.remove(1);
 
 console.log(x);
+
+console.debug("Debug test 1");
+
+console.isDebug = true;
+
+console.debug("Debug test 2");
+
+console.isDebug = false;
+
+console.debug("Debug test 3");
