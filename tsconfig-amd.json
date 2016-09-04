@@ -4,6 +4,7 @@
         "module": "amd",
         "target": "ES5",
         "outFile": "./dist/langext-amd.js",
+        "sourceMap": true,
         "newLine": "LF"
     },
     "exclude": [
