@@ -1,5 +1,12 @@
 # Changes Logs of langext.js
 
+## 2016-09-30
+
+-   v1.2.1-beta-2
+
+    - Updated `RegExp.escape`. (Angus.Fenying)
+    - Added a method `Array.prototype.removeByIndexes`. (Angus.Fenying)
+
 ## 2016-08-28
 
 -   v1.2.1-preview-4

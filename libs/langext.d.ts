@@ -55,6 +55,11 @@ interface Array<T> {
      * Remove specific VALUE from an array by specific times.
      */
     remove(v: T, limit?: number): number;
+
+    /**
+     * Remove values of specific indexes.
+     */
+    removeByIndexes(indexes: number[]): number;
 }
 
 interface StringConstructor {

@@ -2,7 +2,7 @@
 
 import { extendMethod } from "./extDefine";
 
-extendMethod(Array.prototype, "remove", function(v: any, limit: number = 0xFFFFFFFF): number {
+extendMethod(Array.prototype, "remove", function<T>(v: T, limit: number = 0xFFFFFFFF): any {
 
     let pos: number, i: number;
 
@@ -13,4 +13,22 @@ extendMethod(Array.prototype, "remove", function(v: any, limit: number = 0xFFFFF
     }
 
     return i;
+});
+
+extendMethod(Array.prototype, "removeByIndexes", function<T>(v: number[]): any {
+
+    let pos: number, i: number;
+
+    i = 0;
+
+    for (let x of v) {
+
+        if (x < this.length) {
+
+            this[x] = undefined;
+        }
+    }
+
+    return this.remove(undefined);
+
 });

@@ -1,6 +1,6 @@
 {
   "name": "langext",
-  "version": "1.2.1-beta-1",
+  "version": "1.2.1-beta-2",
   "description": "A language extension package for javescript and typescript.",
   "main": "./dist/langext.js",
   "scripts": {
