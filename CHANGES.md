@@ -1,5 +1,11 @@
 # Changes Logs of langext.js
 
+## 2016-10-08
+
+-   v1.2.1-rc-1
+
+    - Added built-in typings file. (Angus.Fenying)
+
 ## 2016-09-30
 
 -   v1.2.1-beta-2

@@ -1,4 +1,4 @@
-/// <reference path="./langext.d.ts"/>
+/// <reference path="../langext.d.ts"/>
 
 import { extendMethod } from "./extDefine";
 

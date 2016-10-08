@@ -7,11 +7,7 @@ This project is for the utilities extensions for Javascript and typescript.
 
 ## Typings
 
-For langext.d.ts, use following command
-
-```
-typings install --save --global github:fenying/langext.d.ts
-``` 
+The `langext.d.ts` has been moved into this package.
 
 ## License
 

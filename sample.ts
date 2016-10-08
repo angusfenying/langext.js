@@ -1,4 +1,4 @@
-/// <reference path="./libs/langext.d.ts" />
+/// <reference path="./langext.d.ts" />
 
 import "./langext";
 

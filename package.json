@@ -1,6 +1,6 @@
 {
   "name": "langext",
-  "version": "1.2.1-beta-2",
+  "version": "1.2.1-rc-1",
   "description": "A language extension package for javescript and typescript.",
   "main": "./dist/langext.js",
   "scripts": {
@@ -29,5 +29,6 @@
     "Fenying <i.am.x.fenying@gmail.com>"
   ],
   "author": "Fenying",
-  "license": "LGPL-3.0"
+  "license": "LGPL-3.0",
+  "typings": "./langext.d.ts"
 }
