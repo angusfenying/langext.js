@@ -8,14 +8,14 @@ extendMethod(RegExp, "escape", function(str: string): string {
 
 });
 
-extendMethod(RegExp.prototype, "matches", function(str: string): MatchResultItem[] {
+extendMethod(RegExp.prototype, "matches", function(str: string): langext.MatchResultItem[] {
 
-    let mc: MatchResultItem[] = [];
+    let mc: langext.MatchResultItem[] = [];
     let rea: RegExpExecArray;
 
     while (rea = this.exec(str)) {
 
-        let gc: MatchSubGroup[] = [];
+        let gc: langext.MatchSubGroup[] = [];
 
         let i: number = 0;
         let ot: string = rea[0];
@@ -23,7 +23,7 @@ extendMethod(RegExp.prototype, "matches", function(str: string): MatchResultItem
 
         for (let val of rea) {
 
-            let g: MatchSubGroup;
+            let g: langext.MatchSubGroup;
 
             if (i === 0) {
 

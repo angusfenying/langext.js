@@ -63,3 +63,15 @@ console.debug("Debug test 2");
 console.isDebug = false;
 
 console.debug("Debug test 3");
+
+let v1: number = 122;
+
+if (v1.insides(100, 123)) {
+
+    console.info(`100 <= ${v1} <= 123`);
+}
+
+if (v1.between(100, 123)) {
+
+    console.info(`100 < ${v1} < 123`);
+}

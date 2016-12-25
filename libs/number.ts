@@ -2,7 +2,7 @@
 
 import { extendMethod } from "./extDefine";
 
-extendMethod(Number.prototype, "formatSize", function(ac: number = 1): NumberFormatSizeResult {
+extendMethod(Number.prototype, "formatSize", function(ac: number = 1): langext.NumberFormatSizeResult {
 
     let k = this * 1.0;
     let i = 0;
@@ -24,4 +24,24 @@ extendMethod(Number.prototype, "formatSize", function(ac: number = 1): NumberFor
         "num": k > 0 ? k.toFixed(ac) : "0",
         "unit": units[i]
     };
+});
+
+extendMethod(Number.prototype, "between", function(a: number, b: number): boolean {
+
+    if (a > b) {
+
+        throw new TypeError("First parameter cannot be larger than the second one.");
+    }
+
+    return a < this && this < b;
+});
+
+extendMethod(Number.prototype, "insides", function(a: number, b: number): boolean {
+
+    if (a > b) {
+
+        throw new TypeError("First parameter cannot be larger than the second one.");
+    }
+
+    return a <= this && this <= b;
 });

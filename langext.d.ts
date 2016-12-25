@@ -1,4 +1,26 @@
 
+declare namespace langext {
+
+    export interface NumberFormatSizeResult {
+
+        "num": string;
+
+        "unit": string;
+    }
+
+    export interface MatchSubGroup {
+        "index": number;
+        "value": string;
+    }
+
+    export interface MatchResultItem {
+        "index": number;
+        "value": string;
+        "groups": MatchSubGroup[];
+    }
+
+}
+
 interface String {
 
     /**
@@ -132,30 +154,22 @@ interface Date {
     getToday(): Date;
 }
 
-interface NumberFormatSizeResult {
-
-    "num": string;
-
-    "unit": string;
-}
-
 interface Number {
 
     /**
      * Format a number into size
      */
-    formatSize (ac?: number) : NumberFormatSizeResult;
-}
+    formatSize (ac?: number) : langext.NumberFormatSizeResult;
 
-interface MatchSubGroup {
-    "index": number;
-    "value": string;
-}
+    /**
+     * Test if a number larger than a and lower than b
+     */
+    between(a: number, b: number): boolean;
 
-interface MatchResultItem {
-    "index": number;
-    "value": string;
-    "groups": MatchSubGroup[];
+    /**
+     * Test if a number >= a and <= b
+     */
+    insides(a: number, b: number): boolean;
 }
 
 interface RegExp {
@@ -164,7 +178,7 @@ interface RegExp {
      * Return all matchable results, with the position of
      * all matched sub item.
      */
-    matches(str: string): MatchResultItem[];
+    matches(str: string): langext.MatchResultItem[];
 }
 
 interface RegExpConstructor {

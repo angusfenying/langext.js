@@ -1,5 +1,11 @@
 # Changes Logs of langext.js
 
+## 2016-12-25
+
+-   v1.2.1-rc-2
+
+    - Added new methods `between` and `insides` for number. (Angus.Fenying)
+
 ## 2016-10-08
 
 -   v1.2.1-rc-1
